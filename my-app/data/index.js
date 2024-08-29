@@ -1,4 +1,4 @@
-[
+export const PHARMA = [
   {
     name: "Pfizer",
     ticker: "PFE",
