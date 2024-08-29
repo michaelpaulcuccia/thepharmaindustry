@@ -8,7 +8,7 @@ const Root = styled.div`
   align-items: center;
   grid-gap: 35px;
   flex-wrap: wrap;
-  margin: 18px 100px 26px 100px;
+  margin: 18px 100px 32px 100px;
 
   @media (max-width: ${mobileBreakpoint}) {
     flex-direction: column;
