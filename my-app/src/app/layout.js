@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "../../lib/registry";
 import "./globals.css";
 import { Container } from "@mui/material";
+import { PharmaContextProvider } from "../../context/PharmaContext";
 import NavBar from "../../components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,12 +16,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <Container maxWidth="xl">
-            <NavBar />
-            {children}
-          </Container>
-        </StyledComponentsRegistry>
+        <PharmaContextProvider>
+          <StyledComponentsRegistry>
+            <Container maxWidth="xl">
+              <NavBar />
+              {children}
+            </Container>
+          </StyledComponentsRegistry>
+        </PharmaContextProvider>
       </body>
     </html>
   );
