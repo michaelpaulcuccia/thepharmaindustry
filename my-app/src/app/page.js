@@ -3,22 +3,25 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import PharmaContext from "../../context/PharmaContext";
 import { HeadlineText } from "../../components/text";
+import AllLogosContainer from "../../components/AllLogosContainer";
 
 export default function page() {
   const { PHARMA } = useContext(PharmaContext);
 
   return (
     <div>
-      {PHARMA.map((item, i) => (
-        <div key={i} style={{ marginBottom: "18px" }}>
-          <Image
-            src={`/logos/${item.name}.svg`}
-            height={175}
-            width={175}
-            layout="intrinsic"
-          />
-        </div>
-      ))}
+      <AllLogosContainer>
+        {PHARMA.map((item, i) => (
+          <div key={i}>
+            <Image
+              src={`/logos/${item.name}.svg`}
+              height={175}
+              width={175}
+              layout="intrinsic"
+            />
+          </div>
+        ))}
+      </AllLogosContainer>
 
       <HeadlineText>
         These companies are among the most profitable in the pharmaceutical

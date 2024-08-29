@@ -11,6 +11,7 @@ const StyledHeadlineText = styled.h2`
   @media (max-width: ${mobileBreakpoint}) {
     font-size: 22px;
     line-height: 22px;
+    text-align: center;
   }
 `;
 
