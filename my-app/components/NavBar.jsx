@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import { Bebas_Neue } from "next/font/google";
 import { mobileBreakpoint } from "../constants";
@@ -41,25 +42,27 @@ const ImageContainer = styled.div`
   }
 
   img {
+    margin: 0 3px;
     @media (max-width: ${mobileBreakpoint}) {
-      margin-bottom: 4px;
+      margin: 0 0 4px 0;
     }
   }
 `;
 
 export default function NavBar() {
   return (
-    <Root>
-      <ImageContainer>
-        <Image src="/images/needle.svg" height={25} width={25} />
-        <Image src="/images/mortarpestle.svg" height={25} width={25} />
-      </ImageContainer>
-
-      <h2 className={bebas.className}>the pharmaceutical industry</h2>
-      <ImageContainer>
-        <Image src="/images/microscope.svg" height={25} width={25} />
-        <Image src="/images/pill.svg" height={25} width={25} />
-      </ImageContainer>
-    </Root>
+    <Link href="/">
+      <Root>
+        <ImageContainer>
+          <Image src="/images/needle.svg" height={25} width={25} />
+          <Image src="/images/mortarpestle.svg" height={25} width={25} />
+        </ImageContainer>
+        <h2 className={bebas.className}>the pharmaceutical industry</h2>
+        <ImageContainer>
+          <Image src="/images/microscope.svg" height={25} width={25} />
+          <Image src="/images/pill.svg" height={25} width={25} />
+        </ImageContainer>
+      </Root>
+    </Link>
   );
 }

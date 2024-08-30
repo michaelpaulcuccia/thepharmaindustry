@@ -1,7 +1,12 @@
 export const PHARMA = [
   {
     name: "Pfizer",
-    ticker: "PFE",
+    logoAndRouteName: "pfizer",
+    briefDescription:
+      "is known for its extensive range of products, including vaccines, oncology, and cardiology drugs.",
+    founded: "1849",
+    headquarters: "New York City, NY, USA",
+    numberOfEmployees: "83,000",
     drugs: [
       {
         drugName: "Comirnaty",
@@ -37,7 +42,12 @@ export const PHARMA = [
   },
   {
     name: "Roche",
-    ticker: "RHHBY",
+    logoAndRouteName: "roche",
+    briefDescription:
+      "specializes in oncology, immunology, infectious diseases, and other diagnostics.",
+    founded: "1896",
+    headquarters: "Basel, Switzerland",
+    numberOfEmployees: "103,000",
     drugs: [
       {
         drugName: "Ocrevus",
@@ -73,7 +83,12 @@ export const PHARMA = [
   },
   {
     name: "Johnson & Johnson",
-    ticker: "JNJ",
+    logoAndRouteName: "johnsonandjohnson",
+    briefDescription:
+      "covers a broad spectrum of healthcare products, from pharmaceuticals to medical devices.",
+    founded: "1886",
+    headquarters: "New Brunswick, NJ, USA",
+    numberOfEmployees: "153,000",
     drugs: [
       {
         drugName: "Stelara",
@@ -109,7 +124,12 @@ export const PHARMA = [
   },
   {
     name: "Novartis",
-    ticker: "NVS",
+    logoAndRouteName: "novartis",
+    briefDescription:
+      "focuses on oncology, generics, and other innovative medicines.",
+    founded: "1996",
+    headquarters: "Basel, Switzerland",
+    numberOfEmployees: "105,000",
     drugs: [
       {
         drugName: "Cosentyx",
@@ -145,7 +165,12 @@ export const PHARMA = [
   },
   {
     name: "Merck & Co.",
-    ticker: "MRK",
+    logoAndRouteName: "merckandco",
+    briefDescription:
+      "is renowned for vaccines, cancer drugs, and treatments for chronic conditions.",
+    founded: "1891",
+    headquarters: "Rahway, NJ, USA",
+    numberOfEmployees: "68,000",
     drugs: [
       {
         drugName: "Keytruda",
@@ -181,7 +206,12 @@ export const PHARMA = [
   },
   {
     name: "AbbVie",
-    ticker: "ABBV",
+    logoAndRouteName: "abbvie",
+    briefDescription:
+      "is known for its immunology and oncology products, including Humira.",
+    founded: "2013",
+    headquarters: "Chicago, IL, USA",
+    numberOfEmployees: "50,000",
     drugs: [
       {
         drugName: "Humira",
@@ -217,7 +247,12 @@ export const PHARMA = [
   },
   {
     name: "Bristol-Myers Squibb",
-    ticker: "BMY",
+    logoAndRouteName: "bristolmeyerssquibb",
+    briefDescription:
+      "specializes in oncology, immunology, and cardiovascular drugs.",
+    founded: "1858",
+    headquarters: "New York City, NY, USA",
+    numberOfEmployees: "34,000",
     drugs: [
       {
         drugName: "Eliquis",
@@ -253,7 +288,12 @@ export const PHARMA = [
   },
   {
     name: "Sanofi",
-    ticker: "SNY",
+    logoAndRouteName: "sanofi",
+    briefDescription:
+      "is a major player in vaccines, diabetes, and cardiovascular treatments.",
+    founded: "1973",
+    headquarters: "Paris, France",
+    numberOfEmployees: "91,000",
     drugs: [
       {
         drugName: "Dupixent",
@@ -289,7 +329,12 @@ export const PHARMA = [
   },
   {
     name: "GlaxoSmithKline",
-    ticker: "GSK",
+    logoAndRouteName: "glaxosmithkline",
+    briefDescription:
+      "focuses on vaccines, oncology, respiratory, and HIV treatments.",
+    founded: "2000",
+    headquarters: "Brentford, London, UK",
+    numberOfEmployees: "69,000",
     drugs: [
       {
         drugName: "Shingrix",
@@ -325,7 +370,12 @@ export const PHARMA = [
   },
   {
     name: "AstraZeneca",
-    ticker: "AZN",
+    logoAndRouteName: "astrazeneca",
+    briefDescription:
+      "is known for its work in oncology, cardiovascular, renal, and respiratory therapies.",
+    founded: "1999",
+    headquarters: "Cambridge, UK",
+    numberOfEmployees: "83,000",
     drugs: [
       {
         drugName: "Tagrisso",

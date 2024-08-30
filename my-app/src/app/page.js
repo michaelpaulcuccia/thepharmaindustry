@@ -1,6 +1,7 @@
 "use client";
 import React, { useContext } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import PharmaContext from "../../context/PharmaContext";
 import { HeadlineText } from "../../components/text";
 import AllLogosContainer from "../../components/AllLogosContainer";
@@ -12,14 +13,14 @@ export default function page() {
     <div>
       <AllLogosContainer>
         {PHARMA.map((item, i) => (
-          <div key={i}>
+          <Link href={`/companyname/${item.logoAndRouteName}`} key={i}>
             <Image
-              src={`/logos/${item.name}.svg`}
+              src={`/logos/${item.logoAndRouteName}.svg`}
               height={175}
               width={175}
-              layout="intrinsic"
+              alt=""
             />
-          </div>
+          </Link>
         ))}
       </AllLogosContainer>
 
