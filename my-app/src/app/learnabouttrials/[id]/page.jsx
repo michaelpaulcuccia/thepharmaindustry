@@ -5,20 +5,19 @@ import { fetchByDrugName } from "../../../../utils";
 import { HeadlineText } from "../../../../components/text";
 
 export default function page() {
-  const [trialData, setTrialData] = useState(null);
+  const [trialData, setTrialData] = useState([]);
+
   const pathname = usePathname();
   const trimmedPathName = pathname.split("/learnabouttrials/")[1];
-  console.log(trimmedPathName);
   const getData = async () => {
     const data = await fetchByDrugName(trimmedPathName);
-    setTrialData(data);
+    const { studies } = data;
+    setTrialData(studies);
   };
 
   useEffect(() => {
     getData();
   }, []);
-
-  console.log(trialData);
 
   return (
     <div>
@@ -48,6 +47,12 @@ export default function page() {
         extended-release versions) of the drug or new methods of administration
         (e.g., injectables) and seek new patents for these variations.
       </HeadlineText>
+      <p>
+        There are currently {trialData.length} studies for {trimmedPathName}.
+      </p>
+      {trialData.map((item, i) => (
+        <div key={i}>{item.protocolSection.statusModule.overallStatus}</div>
+      ))}
     </div>
   );
 }

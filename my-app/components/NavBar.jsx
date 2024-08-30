@@ -54,13 +54,13 @@ export default function NavBar() {
     <Link href="/">
       <Root>
         <ImageContainer>
-          <Image src="/images/needle.svg" height={25} width={25} />
-          <Image src="/images/mortarpestle.svg" height={25} width={25} />
+          <Image src="/images/needle.svg" height={25} width={25} alt="" />
+          <Image src="/images/mortarpestle.svg" height={25} width={25} alt="" />
         </ImageContainer>
         <h2 className={bebas.className}>the pharmaceutical industry</h2>
         <ImageContainer>
-          <Image src="/images/microscope.svg" height={25} width={25} />
-          <Image src="/images/pill.svg" height={25} width={25} />
+          <Image src="/images/microscope.svg" height={25} width={25} alt="" />
+          <Image src="/images/pill.svg" height={25} width={25} alt="" />
         </ImageContainer>
       </Root>
     </Link>
