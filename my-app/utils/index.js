@@ -10,3 +10,16 @@ export async function fetchByDrugName(id) {
     return null;
   }
 }
+
+export async function getIndication(id) {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_DOMAIN}/indications/${id}`
+    );
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}

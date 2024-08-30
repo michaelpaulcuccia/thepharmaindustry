@@ -9,6 +9,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { mobileBreakpoint } from "../constants";
+import { LineWeight } from "@mui/icons-material";
 
 const ComponentWrapper = styled2.div`
   margin: 18px 26px;
@@ -24,7 +25,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
+    fontSize: 16,
   },
 }));
 
@@ -48,8 +49,8 @@ export default function StudyTable({ item }) {
           <TableHead>
             <TableRow>
               <StyledTableCell>Title</StyledTableCell>
-              <StyledTableCell align="right">Conditions</StyledTableCell>
-              <StyledTableCell align="right">Status</StyledTableCell>
+              <StyledTableCell>Conditions</StyledTableCell>
+              <StyledTableCell>Status</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -58,7 +59,7 @@ export default function StudyTable({ item }) {
                 <StyledTableCell component="th" scope="row">
                   {field.protocolSection.identificationModule.briefTitle}
                 </StyledTableCell>
-                <StyledTableCell align="right">
+                <StyledTableCell>
                   {field.protocolSection.conditionsModule.conditions.map(
                     (condition, index) => (
                       <React.Fragment key={index}>
@@ -71,7 +72,7 @@ export default function StudyTable({ item }) {
                     )
                   )}
                 </StyledTableCell>
-                <StyledTableCell align="right">
+                <StyledTableCell>
                   {field.protocolSection.statusModule.overallStatus}
                 </StyledTableCell>
               </StyledTableRow>
