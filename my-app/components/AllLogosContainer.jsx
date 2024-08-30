@@ -12,6 +12,7 @@ const Root = styled.div`
 
   @media (max-width: ${mobileBreakpoint}) {
     flex-direction: column;
+    grid-gap: 0px;
   }
 `;
 
