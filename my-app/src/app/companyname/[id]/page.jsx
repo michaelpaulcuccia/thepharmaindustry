@@ -2,8 +2,14 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { usePathname } from "next/navigation";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Container } from "@mui/material";
 import PharmaContext from "../../../../context/PharmaContext";
 import Image from "next/image";
+import Link from "next/link";
 import { HeadlineText } from "../../../../components/text";
 
 const ImageContainer = styled.div`
@@ -18,6 +24,7 @@ export default function page() {
   const company = PHARMA.filter(
     (item) => item.logoAndRouteName === trimmedPathName
   );
+  const { drugs } = company[0];
 
   return (
     <div>
@@ -36,6 +43,82 @@ export default function page() {
       </HeadlineText>
       <HeadlineText>
         {company[0].name} {company[0].briefDescription}
+      </HeadlineText>
+      <HeadlineText>
+        These are the five most popular and profitable drugs {company[0].name}{" "}
+        produces:
+      </HeadlineText>
+      {drugs.map((item, i) => (
+        <Container key={i} maxWidth="md">
+          <Accordion
+            sx={{
+              backgroundColor: "#f5f5f5",
+              border: "1px solid #e0e0e0",
+              boxShadow: "none",
+              "&:before": {
+                display: "none",
+              },
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              {item.drugName}
+            </AccordionSummary>
+            <AccordionDetails>
+              <p>Usage: {item.usage}</p>
+              <br />
+              <div>
+                Website:{" "}
+                <Link
+                  href={item.website}
+                  target="_blank"
+                  style={{ textDecoration: "underline", color: "blue" }}
+                >
+                  {" "}
+                  {item.drugName}
+                </Link>
+              </div>
+              <br />
+              <Link
+                href={`/learnabouttrials/${item.drugName}`}
+                style={{ textDecoration: "underline", color: "blue" }}
+              >
+                {" "}
+                Learn about clinical trials.
+              </Link>
+            </AccordionDetails>
+          </Accordion>
+        </Container>
+      ))}
+      <br />
+      <HeadlineText>
+        Companies can extend their market protection and delay generic
+        competition through several strategies: New Indications: If the company
+        conducts new clinical trials and gets FDA approval for additional uses
+        (indications) of the drug, it may gain additional exclusivity. This does
+        not extend the original patent but can delay generics for those new
+        uses.
+      </HeadlineText>
+      <HeadlineText>
+        Combination Therapies: Companies may combine their drug with another
+        drug (sometimes another patented drug) and seek approval for the
+        combination therapy. This can create a new product with its own patent
+        or exclusivity period.
+      </HeadlineText>
+      <HeadlineText>
+        Patent Extensions: In some cases, a company can get a patent term
+        extension (up to 5 years) under the Hatch-Waxman Act to make up for the
+        time lost during the FDA's drug review process. This extension applies
+        only to one of the drug's patents, usually the one covering the active
+        ingredient.
+      </HeadlineText>
+      <HeadlineText>
+        Reformulation Patents: Companies may create new formulations (e.g.,
+        extended-release versions) of the drug or new methods of administration
+        (e.g., injectables) and seek new patents for these variations.
       </HeadlineText>
     </div>
   );
