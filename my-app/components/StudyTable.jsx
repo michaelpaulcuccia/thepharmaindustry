@@ -59,7 +59,17 @@ export default function StudyTable({ item }) {
                   {field.protocolSection.identificationModule.briefTitle}
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  {field.protocolSection.conditionsModule.conditions}
+                  {field.protocolSection.conditionsModule.conditions.map(
+                    (condition, index) => (
+                      <React.Fragment key={index}>
+                        <span>{condition}</span>
+                        {index <
+                          field.protocolSection.conditionsModule.conditions
+                            .length -
+                            1 && ", "}
+                      </React.Fragment>
+                    )
+                  )}
                 </StyledTableCell>
                 <StyledTableCell align="right">
                   {field.protocolSection.statusModule.overallStatus}

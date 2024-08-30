@@ -48,6 +48,7 @@ export default function page() {
         These are the five most popular and profitable drugs {company[0].name}{" "}
         produces:
       </HeadlineText>
+      <div style={{ marginBottom: "36px" }}></div>
       {drugs.map((item, i) => (
         <Container key={i} maxWidth="md">
           <Accordion
@@ -65,13 +66,15 @@ export default function page() {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              {item.drugName}
+              <h3>{item.drugName}</h3>
             </AccordionSummary>
             <AccordionDetails>
-              <p>Usage: {item.usage}</p>
+              <p>
+                <strong>Usage:</strong> {item.usage}
+              </p>
               <br />
               <div>
-                Website:{" "}
+                <strong>Website:</strong>{" "}
                 <Link
                   href={item.website}
                   target="_blank"

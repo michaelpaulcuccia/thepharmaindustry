@@ -23,11 +23,13 @@ export default function page() {
     <div>
       <HeadlineText>
         Companies can extend their market protection and delay generic
-        competition through several strategies: New Indications: If the company
-        conducts new clinical trials and gets FDA approval for additional uses
-        (indications) of the drug, it may gain additional exclusivity. This does
-        not extend the original patent but can delay generics for those new
-        uses.
+        competition through several strategies:
+      </HeadlineText>
+      <HeadlineText>
+        New Indications: If the company conducts new clinical trials and gets
+        FDA approval for additional uses (indications) of the drug, it may gain
+        additional exclusivity. This does not extend the original patent but can
+        delay generics for those new uses.
       </HeadlineText>
       <HeadlineText>
         Combination Therapies: Companies may combine their drug with another
@@ -47,9 +49,10 @@ export default function page() {
         extended-release versions) of the drug or new methods of administration
         (e.g., injectables) and seek new patents for these variations.
       </HeadlineText>
-      <p>
-        There are currently {trialData.length} studies for {trimmedPathName}.
-      </p>
+      <HeadlineText>
+        There are currently {trialData.length} studies for {trimmedPathName}{" "}
+        available at ClinicalTrials.gov.
+      </HeadlineText>
       <StudyTable item={trialData} />
     </div>
   );
