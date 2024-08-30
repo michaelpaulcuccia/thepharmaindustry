@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { fetchByDrugName } from "../../../../utils";
 import { HeadlineText } from "../../../../components/text";
+import StudyTable from "../../../../components/StudyTable";
 
 export default function page() {
   const [trialData, setTrialData] = useState([]);
-
   const pathname = usePathname();
   const trimmedPathName = pathname.split("/learnabouttrials/")[1];
   const getData = async () => {
@@ -50,9 +50,7 @@ export default function page() {
       <p>
         There are currently {trialData.length} studies for {trimmedPathName}.
       </p>
-      {trialData.map((item, i) => (
-        <div key={i}>{item.protocolSection.statusModule.overallStatus}</div>
-      ))}
+      <StudyTable item={trialData} />
     </div>
   );
 }
