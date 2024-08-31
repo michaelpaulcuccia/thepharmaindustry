@@ -206,7 +206,7 @@ export const PHARMA = [
   },
   {
     name: "AbbVie",
-    logoAndRouteName: "abbvie",
+    logoAndRouteName: "abbvie1",
     briefDescription:
       "is known for its immunology and oncology products, including Humira.",
     founded: "2013",
