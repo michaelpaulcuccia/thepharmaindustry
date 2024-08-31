@@ -30,10 +30,10 @@ export default function page() {
     <div>
       <ImageContainer>
         <Image
-          src={`/logos/${company[0].logoAndRouteName}.svg`}
+          src={`/logos/${company[0].logoAndRouteName}.png`}
           height={150}
           width={150}
-          alt=""
+          alt={company[0].name}
         />
       </ImageContainer>
       <HeadlineText>
