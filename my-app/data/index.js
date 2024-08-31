@@ -247,7 +247,7 @@ export const PHARMA = [
   },
   {
     name: "Bristol-Myers Squibb",
-    logoAndRouteName: "bristolmeyerssquibb1",
+    logoAndRouteName: "bristolmeyerssquibb",
     briefDescription:
       "specializes in oncology, immunology, and cardiovascular drugs.",
     founded: "1858",
