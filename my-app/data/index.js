@@ -42,7 +42,7 @@ export const PHARMA = [
   },
   {
     name: "Roche",
-    logoAndRouteName: "roche",
+    logoAndRouteName: "roche1",
     briefDescription:
       "specializes in oncology, immunology, infectious diseases, and other diagnostics.",
     founded: "1896",
@@ -124,7 +124,7 @@ export const PHARMA = [
   },
   {
     name: "Novartis",
-    logoAndRouteName: "novartis",
+    logoAndRouteName: "novartis1",
     briefDescription:
       "focuses on oncology, generics, and other innovative medicines.",
     founded: "1996",
@@ -247,7 +247,7 @@ export const PHARMA = [
   },
   {
     name: "Bristol-Myers Squibb",
-    logoAndRouteName: "bristolmeyerssquibb",
+    logoAndRouteName: "bristolmeyerssquibb1",
     briefDescription:
       "specializes in oncology, immunology, and cardiovascular drugs.",
     founded: "1858",
@@ -288,7 +288,7 @@ export const PHARMA = [
   },
   {
     name: "Sanofi",
-    logoAndRouteName: "sanofi",
+    logoAndRouteName: "sanofi1",
     briefDescription:
       "is a major player in vaccines, diabetes, and cardiovascular treatments.",
     founded: "1973",
@@ -329,7 +329,7 @@ export const PHARMA = [
   },
   {
     name: "GlaxoSmithKline",
-    logoAndRouteName: "glaxosmithkline",
+    logoAndRouteName: "glaxosmithkline1",
     briefDescription:
       "focuses on vaccines, oncology, respiratory, and HIV treatments.",
     founded: "2000",
@@ -370,7 +370,7 @@ export const PHARMA = [
   },
   {
     name: "AstraZeneca",
-    logoAndRouteName: "astrazeneca",
+    logoAndRouteName: "astrazeneca1",
     briefDescription:
       "is known for its work in oncology, cardiovascular, renal, and respiratory therapies.",
     founded: "1999",
