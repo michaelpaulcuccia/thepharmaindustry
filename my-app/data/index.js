@@ -1,7 +1,7 @@
 export const PHARMA = [
   {
     name: "Pfizer",
-    logoAndRouteName: "pfizer",
+    logoAndRouteName: "pfizer1",
     briefDescription:
       "is known for its extensive range of products, including vaccines, oncology, and cardiology drugs.",
     founded: "1849",
@@ -206,7 +206,7 @@ export const PHARMA = [
   },
   {
     name: "AbbVie",
-    logoAndRouteName: "abbvie1",
+    logoAndRouteName: "abbvie",
     briefDescription:
       "is known for its immunology and oncology products, including Humira.",
     founded: "2013",
