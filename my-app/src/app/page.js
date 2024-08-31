@@ -15,7 +15,7 @@ export default function page() {
         {PHARMA.map((item, i) => (
           <Link href={`/companyname/${item.logoAndRouteName}`} key={i}>
             <Image
-              src={`/logos/${item.logoAndRouteName}.png`}
+              src={`/logos/${item.logoAndRouteName}.svg`}
               height={175}
               width={175}
               alt={item.name}

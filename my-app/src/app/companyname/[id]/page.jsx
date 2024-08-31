@@ -30,7 +30,7 @@ export default function page() {
     <div>
       <ImageContainer>
         <Image
-          src={`/logos/${company[0].logoAndRouteName}.png`}
+          src={`/logos/${company[0].logoAndRouteName}.svg`}
           height={150}
           width={150}
           alt={company[0].name}
