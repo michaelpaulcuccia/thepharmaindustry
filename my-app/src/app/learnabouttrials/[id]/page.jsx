@@ -19,10 +19,15 @@ export default function page() {
     const { studies } = data;
     setTrialData(studies);
     const indication = await getIndication(trimmedPathName);
-    const { results } = indication;
-    const [firstItem] = results;
-    const { indications_and_usage } = firstItem;
-    setIndicationData(indications_and_usage[0]);
+    console.log(indication);
+    if (indication.error) {
+      setIndicationData("Data not found.");
+    } else {
+      const { results } = indication;
+      const [firstItem] = results;
+      const { indications_and_usage } = firstItem;
+      setIndicationData(indications_and_usage[0]);
+    }
   };
 
   useEffect(() => {
